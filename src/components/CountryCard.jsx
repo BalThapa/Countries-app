@@ -1,9 +1,10 @@
 import React from 'react';
-import { Card, Col, ListGroup } from 'react-bootstrap';
+import { Card, Col, ListGroup, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 const CountryCard = ({country}) => {
     return (
+
         
         <Col className="mt-5">
           <LinkContainer
@@ -11,11 +12,12 @@ const CountryCard = ({country}) => {
             state={{ country: country }}
           >
             <Card className="h-100">
+              <Button variant="light" style={{position:'absolute',right:'0', top:'0', background:'transparent', border:'none', fontSize:'xx-large'}}>❤️</Button>
               <Card.Body className="d-flex flex-column">
-                <Card.Img alt='' src={country.flags.png}/>
-                <Card.Title>{country.name.common}</Card.Title>
-                <Card.Subtitle className="mb-5 text-muted">
-                  {country.name.official}
+                <Card.Img alt='' src={country.flags.png} className="mb-3 text-muted"/>
+                <Card.Title className="mb-3 text-muted">{country.name.common}<Card.Subtitle className="mb-3 text-muted" > ({country.name.official})</Card.Subtitle></Card.Title>
+                <Card.Subtitle className="mb-4 text-muted">
+                  {country.capital}
                 </Card.Subtitle>
                 <ListGroup
                   variant="flush"
