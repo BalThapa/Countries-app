@@ -24,11 +24,6 @@ const Countries = () => {
     dispatch(initializeCountries())
   },[dispatch]
   )
-  const country = {
-    name: {
-      common: 'Example Country'
-    }
-  }
 
   return (
     <Container fluid>
@@ -51,7 +46,7 @@ const Countries = () => {
           return c.name.official.toLowerCase().includes(search.toLowerCase());  
         })
         .map((country)=>(
-          <CountryCard key={country.name} country={country}/>
+          <CountryCard key={country.name.common} country={country}/>
         ))}
     
       {/* {countriesList.map((country)=>{

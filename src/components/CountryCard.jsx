@@ -14,7 +14,7 @@ const CountryCard = ({country}) => {
             <Card className="h-100">
               <Button variant="light" style={{position:'absolute',right:'0', top:'0', background:'transparent', border:'none', fontSize:'xx-large'}}>❤️</Button>
               <Card.Body className="d-flex flex-column">
-                <Card.Img alt='' src={country.flags.png} className="mb-3 text-muted"/>
+                <Card.Img alt='' src={country.flags.png} className="mb-3 text-muted" />
                 <Card.Title className="mb-3 text-muted">{country.name.common}<Card.Subtitle className="mb-3 text-muted" > ({country.name.official})</Card.Subtitle></Card.Title>
                 <Card.Subtitle className="mb-4 text-muted">
                   {country.capital}

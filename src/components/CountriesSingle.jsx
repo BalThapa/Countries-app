@@ -51,8 +51,10 @@ if (loading) {
 }
   return (
     <Container>
+      
     <Row className='mt-5'>
       <Col>
+      
       <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.capital}`}/>
       </Col>
       <Col>
@@ -69,6 +71,7 @@ if (loading) {
           Right now it is <strong>{parseInt(weather.main.temp)}</strong> degrees in <strong>{country.capital}</strong> {weather.weather[0].description}
         </p>
         <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={`${weather.weather[0].description}`} />
+        {/* <img src='' alt='' >{country.demonyms.flag.png}</img> */}
         </div>
       )}
       </Col>  
@@ -78,6 +81,10 @@ if (loading) {
       <Button variant='primary' onClick={() => navigate('/countries')}>Back to Countries</Button>
       </Col>
     </Row>
+    <Col>
+      
+      <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.subregion}`}/>
+      </Col>
     </Container>
   );
 };
