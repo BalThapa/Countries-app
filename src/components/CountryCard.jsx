@@ -12,7 +12,7 @@ const CountryCard = ({country}) => {
             state={{ country: country }}
           >
             <Card className="h-100">
-              <Button variant="light" style={{position:'absolute',right:'0', top:'0', background:'transparent', border:'none', fontSize:'xx-large'}}>❤️</Button>
+              <Button variant="light" style={{position:'absolute',right:'0', top:'0', background:'transparent', border:'none', fontSize:'xx-large'}}>🤍❤️ </Button>
               <Card.Body className="d-flex flex-column">
                 <Card.Img alt='' src={country.flags.png} className="mb-3 text-muted" />
                 <Card.Title className="mb-3 text-muted">{country.name.common}<Card.Subtitle className="mb-3 text-muted" > ({country.name.official})</Card.Subtitle></Card.Title>
@@ -24,17 +24,25 @@ const CountryCard = ({country}) => {
                   className="flex-grow-1 justify-content-end"
                 >
                   <ListGroup.Item>
-                    <i className="bi bi-translate me-2"></i>
-                    
+                    <i className="bi bi-translate me-2"><span style={{paddingLeft:'1rem'}}>{Object.values(country.languages ?? {}).join(", ")}</span>
+                     
+                    </i>
+              
                   </ListGroup.Item>
                   <ListGroup.Item>
-                    <i className="bi bi-cash-coin me-2"></i>
+                    <i className="bi bi-cash-coin me-2"><span style={{paddingLeft:'1rem'}}>{Object.values(country.currencies || {})
+                      .map((currency)=>currency.name)
+                      .join(", ")}</span>
+                      
+                    
+                    </i>
                     
                   </ListGroup.Item>
 
                   <ListGroup.Item>
-                    <i className="bi bi-people me-2"></i>
-                    {country.population}
+                    <i className="bi bi-people me-2" ><span style={{paddingLeft:'1rem'}}>{(new Intl.NumberFormat('en-EN').format(country.population))}</span> 
+                    </i>
+                   
                   </ListGroup.Item>
                 </ListGroup>
               </Card.Body>

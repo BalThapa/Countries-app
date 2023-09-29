@@ -1,10 +1,11 @@
 import React from 'react';
+import Hero from './Hero';
 
 const Home = () => {
   return (
     <div>
       <div>
-        <h1>Countries</h1>
+        <Hero />
         <span>Countries app </span>is a simple React application made in
         Business College Helsinki lessons. App uses{' '}
         <a href="https://restcountries.com/">https://restcountries.com/ </a> and{' '}
