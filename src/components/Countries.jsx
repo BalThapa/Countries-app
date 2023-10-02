@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect  } from 'react';
 import CountryCard from './CountryCard';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import { initializeCountries } from '../features/countries/countriesSlice';
 
 const Countries = () => {
@@ -49,12 +47,12 @@ const Countries = () => {
           <CountryCard key={country.name.common} country={country}/>
         ))}
     
-      {/* {countriesList.map((country)=>{
+      {countriesList.map((country)=>{
         return(
           <CountryCard country={country}
           key={ country.name.common } />
         )
-      })} */}
+      })}
       </Row>
     </Container>
   );
