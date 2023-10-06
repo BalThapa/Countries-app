@@ -9,7 +9,7 @@ export const countriesSlice = createSlice({
     },
     reducers: {
         isLoading(state,action){
-            state.isLoading=action.payload
+            state.isLoading=action.payload;
         },
         getCountries(state, action) {
             state.countries = action.payload;

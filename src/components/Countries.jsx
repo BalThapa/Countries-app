@@ -10,7 +10,7 @@ import { initializeCountries } from '../features/countries/countriesSlice';
 const Countries = () => {
   const dispatch = useDispatch();
   const countriesList = useSelector((state) => state.countries.countries);
-  const loading = useSelector((state) => state.countries.isLoading);
+  
 
   console.log("CountriesList=", countriesList)
 
@@ -46,13 +46,6 @@ const Countries = () => {
         .map((country)=>(
           <CountryCard key={country.name.common} country={country}/>
         ))}
-    
-      {countriesList.map((country)=>{
-        return(
-          <CountryCard country={country}
-          key={ country.name.common } />
-        )
-      })}
       </Row>
     </Container>
   );

@@ -1,9 +1,8 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Spinner, Image, Col, Button } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useState } from 'react';
+
 
 const CountriesSingle = () => {
   //function hooks
