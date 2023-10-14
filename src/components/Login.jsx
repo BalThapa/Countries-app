@@ -18,7 +18,7 @@ const Login = () => {
     
     return (
         <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:'100vh'}}>
-            <Card style={{height:'auto', width:'35rem', alignItems:'center',  padding:'2rem',gap:'2rem' }}>            
+            <Card style={{height:'auto', width:'auto', alignItems:'center',  padding:'2rem',gap:'2rem', boxShadow:'0 0 10px rgba(0, 0, 0, 0.2)'}}>            
             <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user"  style={{height:'10rem', width:'10rem'}}/>           
             <input
              type="email" 
