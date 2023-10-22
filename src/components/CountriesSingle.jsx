@@ -80,7 +80,6 @@ if (loading) {
       )}
       {!errors &&  (
        <div>
-        country.borders ? 
         <h4>Borders: <i>{country.borders.join(", ")}</i> </h4>
         
       </div> 
@@ -89,11 +88,11 @@ if (loading) {
     </Row>
     <Row>
       <Col>
-      <Button variant='primary' onClick={() => navigate('/countries')}>Back to Countries</Button>
+      <Button variant='primary' onClick={() => navigate('/countries')} style={{marginTop:'1rem'}}>Back to Countries</Button>
       </Col>
     </Row>
     <div style={{display:'flex', margin:'2rem',gap:'1rem'}} >
-      <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.subregion}`} />
+      <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.subregion}`}  />
 
     </div>
     </Container>
