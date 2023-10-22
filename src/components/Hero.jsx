@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     
       <div 
-        style={{minHeight: 'calc(80vh - 130px)',
+        style={{minHeight: 'calc(70vh - 130px)',
               position: 'relative', display: 'flex',
               flexDirection: 'column',
               alignItems:'center',
