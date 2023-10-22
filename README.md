@@ -33,9 +33,9 @@ Features Used:
 
 # ScreenShots
 
-- ![Home](/src/Assets/1.png)
-- ![CountriesList](/src/Assets/3.png)
-- ![CountriesSingle](/src/Assets/2.png)
-- ![Favourites](/src/Assets/4.png)
-- ![Login](/src/Assets/5.png)
-- ![Register](/src/Assets/6.png)
+![Home](/src/Assets/1.png)
+![CountriesList](/src/Assets/3.png)
+![CountriesSingle](/src/Assets/2.png)
+![Favourites](/src/Assets/4.png)
+![Login](/src/Assets/5.png)
+![Register](/src/Assets/6.png)
