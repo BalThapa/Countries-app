@@ -51,11 +51,9 @@ if (loading) {
   )
 }
   return (
-    <Container>
-      
+    <Container> 
     <Row className='mt-5'>
       <Col>
-      
       <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.capital}`}/>
       </Col>
       <Col>
@@ -75,7 +73,18 @@ if (loading) {
         <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={`${weather.weather[0].description}`} />
         </div>
       )}
-      
+      {errors && (
+        <p>
+          <p>This is an island country</p>
+        </p>
+      )}
+      {!errors &&  (
+       <div>
+        country.borders ? 
+        <h4>Borders: <i>{country.borders.join(", ")}</i> </h4>
+        
+      </div> 
+      )}
       </Col>  
     </Row>
     <Row>
@@ -83,9 +92,10 @@ if (loading) {
       <Button variant='primary' onClick={() => navigate('/countries')}>Back to Countries</Button>
       </Col>
     </Row>
-    <Col>
-      <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.subregion}`}/>
-      </Col>
+    <div style={{display:'flex', margin:'2rem',gap:'1rem'}} >
+      <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.subregion}`} />
+
+    </div>
     </Container>
   );
 };
