@@ -27,7 +27,9 @@ const CountriesSingle = () => {
       setError(true);
     })
     .then((res)=> {
-      setWeather(res.data);
+      if (res && res.data){
+        setWeather(res.data)
+      }
       setLoading(false);
     })
   }
@@ -57,11 +59,12 @@ if (loading) {
       <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.capital}`}/>
       </Col>
       <Col>
+      <img alt='' src={country.coatOfArms.png} style={{height:'10rem'}} />
       <h2 className='display-4'>{country.name.common}</h2>
       <h3>{country.capital}</h3>
       {errors && (
         <p>
-          Sorry, we don't weather information for this country.
+          Sorry, we don't have weather information for this country.
         </p>
       )}
       {!errors && weather && (
@@ -70,9 +73,9 @@ if (loading) {
           Right now it is <strong>{parseInt(weather.main.temp)}</strong> degrees in <strong>{country.capital}</strong> {weather.weather[0].description}
         </p>
         <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={`${weather.weather[0].description}`} />
-        {/* <img src='' alt='' >{country.demonyms.flag.png}</img> */}
         </div>
       )}
+      
       </Col>  
     </Row>
     <Row>
@@ -81,7 +84,6 @@ if (loading) {
       </Col>
     </Row>
     <Col>
-      
       <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.subregion}`}/>
       </Col>
     </Container>

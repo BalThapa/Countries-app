@@ -8,11 +8,6 @@ const Home = () => {
     <div>
       <div>
         <Hero />
-      
-        {/* <span>Countries app </span>is a simple React application made in
-        Business College Helsinki lessons. App uses{' '}
-        <a href="https://restcountries.com/">https://restcountries.com/ </a> and{' '}
-        <a href="">https://openweathermap.org/</a> */}
       </div>
       <section style={{
             display:'flex',
@@ -62,7 +57,7 @@ const Home = () => {
               }}>
             <h3>What's the weather like?</h3>
             <p>Visit weathermap and find out the weather conditions!</p>
-            <NavLink to="/countries/:single" style={{textDecoration:'none', color:'tomato'}}>Weather Report</NavLink>
+            <a href='https://www.weather-forecast.com/' style={{textDecoration:'none', color:'tomato'}} target="_blank" rel="noopener noreferrer">Weather Report</a>
           </div>
         </section> 
     </div>

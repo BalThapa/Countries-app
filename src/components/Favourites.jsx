@@ -47,13 +47,11 @@ const Favourites = () => {
                 onChange={(e) => setSearch(e.target.value)}
               />
             </Form>
-          </Col>
-        </Row>
-        <Row xs={2} md={3} lg={4} className=" g-3">
-        <Button onClick={() => {
+            <Button onClick={() => {
           dispatch(clearFavourite())
         }}>Clear Favourites</Button>
-      </Row>
+          </Col>
+        </Row>
         <Row xs={2} md={3} lg={4} className=" g-3">
           {countriesList
             .filter((c) => {
