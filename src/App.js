@@ -4,6 +4,7 @@ import Countries from "./components/Countries";
 import CountriesSingle from "./components/CountriesSingle";
 import Home from "./components/Home";
 import Layout from "./pages/Layout";
+import Footer from "./components/Footer";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Login from "./components/Login";
@@ -31,6 +32,7 @@ const App = () => {
           </Route>
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
