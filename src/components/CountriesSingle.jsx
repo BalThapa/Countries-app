@@ -57,7 +57,6 @@ if (loading) {
       <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.capital}`}/>
       </Col>
       <Col>
-      <img alt='' src={country.coatOfArms.png} style={{height:'10rem'}} />
       <h2 className='display-4'>{country.name.common}</h2>
       <h3>{country.capital}</h3>
       {errors && (
@@ -80,10 +79,11 @@ if (loading) {
       )}
       {!errors &&  (
        <div>
-        <h4>Borders: <i>{country.borders.join(", ")}</i> </h4>
-        
+        <h4>Borders: <i>{country.borders.join(", ")}</i> </h4>  
       </div> 
       )}
+      <h4>Area: {(new Intl.NumberFormat('en-EN').format(country.area))}</h4>
+      <h4>Continent: {country.continents}</h4>
       </Col>  
     </Row>
     <Row>
@@ -92,8 +92,8 @@ if (loading) {
       </Col>
     </Row>
     <div style={{display:'flex', margin:'2rem',gap:'1rem'}} >
-      <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.subregion}`}  />
-
+      <Image thumbnail src={`https://source.unsplash.com/1600x900/?${country.subregion}`}  style={{width:'50%'}} />
+      <Image alt='' src={country.coatOfArms.png} style={{width:'50%'}} />
     </div>
     </Container>
   );
