@@ -25,7 +25,6 @@ const Login = () => {
              value={email}
              onChange={(e)=>setEmail(e.target.value)}
              placeholder="Email"
-
              style={{width:'20rem'}}
              />
             <input
@@ -33,7 +32,6 @@ const Login = () => {
              value={password}
              onChange={(e)=>setPassword(e.target.value)}
              placeholder="Password"
-
              style={{width:'20rem'}}
              />
              <Button onClick={()=> loginWithEmailAndPassword(email, password)} style={{width:'20rem'}}>Login</Button>
